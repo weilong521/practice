@@ -5,9 +5,13 @@ input[type="text"]:not(.selectbox),input[type="number"],input[type="password"] {
     outline-style: none;
     /*border:none;border:0;*/
 }
-
+a{text-decoration:none;}/*隐藏a标签下划线*/
+a:link, a:visited, a:active {text-decoration:none;}
+a:hover{ text-decoration: none; color:#f78b00;}
 
 .clearB{clear: both;}
+
+.t-right{text-align: right;}
 
 .w0{width: 100%;}
 .w1{width: 1200px;}
@@ -22,13 +26,14 @@ input[type="text"]:not(.selectbox),input[type="number"],input[type="password"] {
 
 .relative{position: relative;}
 
-.float-l{float: left;}
+.f-left{float: left;}
 
 
 /* 顶部 */
 
 .top-nav{height: 42px;width: 100%;background-color: #ec3e33}
 .top-nav .cont{width: 1200px;height: 42px;margin: 0 auto;padding: 0 20px;}
+.top-nav .cont a{color: #fff;text-decoration: none;padding: 0 10px;line-height: 42px;font-size: 14px;font-family: "Microsoft YaHei", "微软雅黑", SimHei, Helvetica, Arial, sans-serif}
 .search-box{padding-top: 9px;}
 .search-box input{width: 162px;height: 24px;line-height: 24px;border-radius: 20px;outline: none;background-color: #fff;border: none;padding: 0 10px;}
 
