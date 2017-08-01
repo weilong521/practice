@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 </head>
-<body>
-
+<body class="index-page">
 <div class="top-nav">
     <div class="cont t-right">
         <div class="search-box f-left">
@@ -20,34 +19,115 @@
         <a href="https://www.baidu.com/" title="网站地图">网站地图</a>
     </div>
 </div>
-<div class="nav-box bg1"></div>
+<div class="nav-box">
+    <div class="nav-cont clearfix">
+        <div class="logo-b f-left">
+            <a href="http://www.fanhuaholdings.com/">
+                <img src="img/logo_bot.png" alt="泛华企业集团">
+            </a>
+        </div>
+        <div class="f-right main-nav">
+            <a href="https://www.baidu.com/" title="首页" class="active">首页</a>
+            <a href="https://www.baidu.com/" title="资讯频道">资讯频道</a>
+            <a href="https://www.baidu.com/" title="企业文化">企业文化</a>
+            <a href="https://www.baidu.com/" title="投资者关系">投资者关系</a>
+            <a href="https://www.baidu.com/" title="人力资源">人力资源</a>
+        </div>
+    </div>
+</div>
 
 <!--  轮播  -->
-<div class="relative bg2">
-    <div class="carousel-inner bg3">
-
+<div class="relative bg2 w0 o-hidden">
+    <div class="carousel-inner1 relative " id="bannerBox" style="width: 500%;">
+        <div class="item1 f-left w2"></div>
+        <div class="item2 f-left w2"></div>
+        <div class="item3 f-left w2"></div>
+        <div class="item4 f-left w2"></div>
+        <div class="item1 f-left w2"></div>
     </div>
-    <div class="clearB"></div>
 
 </div>
 
 <!--  内容  -->
-<div class="maincontainer bg4 relative" style="">
-    <div class="w0 clearB">
-        <div class="w1 f-left bg1">
-            <div class="floor1 f-left"></div>
-            <div class="floor1 f-left"></div>
-            <div class="floor1 f-left"></div>
-            <div class="floor1 f-left"></div>
-            <div class="floor1 f-left"></div>
-            <div class="floor1 f-left"></div>
+<div class="maincontainer relative" style="">
+    <div class="w0 clearB layer1 clearfix mar1">
+        <div class="w1 f-left bg1 lft">
+            <div class="floor1 f-left platform-href">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/1.jpg" alt="保网">
+                </a>
+            </div>
+            <div class="floor1 f-left">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/2.jpg" alt="e互助" title="e互助">
+                </a>
+            </div>
+            <div class="floor1 f-left">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/3.jpg" alt="普益投" title="普益投">
+                </a>
+            </div>
+            <div class="floor1 f-left">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/4.jpg" alt="车童网" title="车童网">
+                </a>
+            </div>
+            <div class="floor1 f-left">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/5.png" alt="懒掌柜" title="懒掌柜">
+                </a>
+            </div>
+            <div class="floor1 f-left">
+                <a href="javascript:void(0)">
+                    <img src="img/nav/6.jpg" alt="掌中保" title="掌中保">
+                </a>
+            </div>
         </div>
     </div>
 
-</div>
+    <div class="layer2 mar1 bg1 c1 clearfix">
+        <h3 class="title f1 border-b mar0">泛 华 热 销
+            <a href="javasctipt:void(0)" class="f2 pd1">更多>></a>
+        </h3>
+        <div class="cont-box clearfix">
+            <div class="bg2 lfl">
+                <a href="javascript:void(0)">
+                    <img src="img/pic1.png" alt="">
+                </a>
+            </div>
+            <div class="bg3 mid"></div>
+            <div class="bg4 f-right"></div>
+        </div>
 
+    </div>
+
+</div>
 
 </body>
 
 </html>
 <script src="js/index.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<!--  轮播  -->
+<script type="text/javascript">
+    $(function () {
+        var step = 1,bannerBox = document.getElementById('bannerBox');
+        var bannerStep = function () {
+            if(step == 4){
+                $('#bannerBox').attr('left',0);
+                step = 0;
+            }
+            var left = -100 * step + '%';
+            console.log(left);
+            $('#bannerBox').animate({left: left}, 400);
+            step++;
+        };
+
+        var actionBanner = function () {
+            setInterval(bannerStep, 3000);
+        };
+        actionBanner();
+
+    })
+</script>
